@@ -105,7 +105,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto mb-48 p-8 gap-24">
+      <div className="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto mb-24 p-8 gap-24">
         <div className="flex-shrink-0 p-6">
           <Image
             src="/A-red-check-mark.png.webp"
