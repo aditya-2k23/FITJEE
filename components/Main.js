@@ -3,116 +3,163 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const About = () => {
-  // State to manage active tab
-  const [activeTab, setActiveTab] = useState("Training");
+const InfoCard = ({ title, children }) => (
+  <div className="pt-6 px-16 rounded-lg">
+    <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+    <div className="w-[1050px] relative right-4 mb-4 border border-gray-700/70" />
+    <p className="text-gray-600 text-xl">{children}</p>
+    <div className="w-[1050px] relative right-4 mt-4 border border-gray-700/70" />
+  </div>
+);
 
-  // Function to handle tab change
+const About = () => {
+  const [activeTab, setActiveTab] = useState("Training");
   const handleTabChange = (tab) => setActiveTab(tab);
 
   return (
-    <section className="">
-      <div className="py-10 bg-[#ffcc01]">
-        <h2 className="text-5xl px-10 text-gray-900">
+    <section>
+      <div className="pt-8 pb-28 bg-[#ffcc01]">
+        <h2 className="text-4xl font-semibold px-12 py-8 text-gray-900">
           Our Complete Program Structure Gives Class XII Pass Students The
-          Confidence To Ace Engineering Entrance Exams.
+          Confidence To Aspire And Ace Engineering Entrance And Other
+          Competitive And Scholastic Exams.
         </h2>
       </div>
 
-      {/* Tabs Navigation */}
-      <div className="tabs mt-8">
-        <ul className="flex justify-center space-x-8 border-b border-gray-200 pb-4">
-          {["Training", "Tests", "Analysis"].map((tab) => (
-            <li
-              key={tab}
-              onClick={() => handleTabChange(tab)}
-              className={`cursor-pointer ${
-                activeTab === tab
-                  ? "text-yellow-500 border-b-2 border-yellow-500"
-                  : "text-gray-700"
-              }`}
-            >
-              {tab}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <div className="relative flex flex-col max-w-[1150px] bottom-24 left-10 rounded-tl-3xl rounded-br-3xl max-h-[500px] shadow-lg bg-white">
+        {/* Tabs Navigation */}
+        <div className="mt-8 px-12 pt-5">
+          <ul className="flex space-x-8 pb-4">
+            {["Training", "Tests", "Analysis"].map((tab) => (
+              <li
+                key={tab}
+                onClick={() => handleTabChange(tab)}
+                className={`cursor-pointer text-xl font-semibold py-4 px-6 rounded-xl bg-neutral-200 ${
+                  activeTab === tab ? "text-gray-800" : "text-gray-600"
+                }`}
+              >
+                {tab}
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Tabs Content */}
+        <div className="tab-content mt-8 mb-32">
+          {/* Training Tab */}
+          {activeTab === "Training" && (
+            <InfoCard title="Excellent Classroom Teaching + Personalized Attention + Pattern-Proof Study Material">
+              For JEE Advanced and all other programs, we ensure small batch
+              sizes for more teacher-Student interactions and better learning.
+              Our students consistently excel in exams, making us truly proud of
+              all the FIITJEE results, year after year. In our training, we also
+              include a crash revision program of 30 to 48 hours.
+            </InfoCard>
+          )}
 
-      {/* Tabs Content */}
-      <div className="tab-content mt-8 mb-32">
-        {/* Training Tab */}
-        {activeTab === "Training" && (
-          <div className="bg-gray-100 p-6 rounded-lg">
-            <h4 className="text-xl font-semibold text-gray-800 mb-4">
-              Excellent Classroom Teaching + Personalized Attention +
-              Pattern-Proof Study Material
-            </h4>
-            <p className="text-gray-600">
-              For JEE Advanced and other programs, we ensure small batch sizes
-              for better teacher-student interactions. A crash revision program
-              of 30 to 48 hours is also included.
-            </p>
-          </div>
-        )}
+          {/* Tests Tab */}
+          {activeTab === "Tests" && (
+            <div className="pt-6 px-16 bg-white rounded-lg">
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                Chapter Practice Problems (CPP) + Classroom Learning Improvement
+                Program (CLIP) + myPAT Online Test Series (Accessible 24/7) +
+                Grand Masters Package (GMP)
+              </h4>
+              <p className="text-gray-600">
+                Tests are essential in Students’ JEE preparation after Class
+                XII. It helps our faculty members gauge Students’ level of
+                understanding about the topics and concepts and promotes
+                confidence and better examination temperament.
+              </p>
+              {/* Table */}
+              <div className="overflow-x-auto mt-6">
+                <table className="min-w-full border border-gray-200">
+                  <thead className="bg-gray-200">
+                    <tr>
+                      <th className="px-4 py-2">
+                        Chapter Practice Problems (CPP)
+                      </th>
+                      <th className="px-4 py-2">
+                        Class Learning Improvement Program (CLIP)
+                      </th>
+                      <th className="px-4 py-2">Common Phase Tests</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border px-4 py-2">
+                        Students are given chapter-wise and concept-wise
+                        practice problems, to submit before the beginning of the
+                        next chapter. These are checked by faculty members and
+                        returned to the Students with remarks to help them gain
+                        a strong command over conceptual knowledge.
+                      </td>
+                      <td className="border px-4 py-2">
+                        For those who complete all the assignments, the Class
+                        Learning Improvement Program helps them get a higher
+                        rank and better score in JEE or any other engineering
+                        entrance exam. 
+                      </td>
+                      <td className="border px-4 py-2">
+                        It has exhaustive quizzes in every phase. Test analysis
+                        sessions after the phase tests, help gauge performance.
+                        We also conduct periodic tests on the latest JEE pattern
+                        to acclimatise Students before the final exam.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
 
-        {/* Tests Tab */}
-        {activeTab === "Tests" && (
-          <div className="bg-gray-100 p-6 rounded-lg">
-            <h4 className="text-xl font-semibold text-gray-800 mb-4">
-              Chapter Practice Problems + CLIP + myPAT Online Test Series
-            </h4>
-            <p className="text-gray-600">
-              Tests help gauge students&apos; understanding and improve
-              confidence for the JEE Main & Advanced exams.
-            </p>
-            {/* Table */}
-            <div className="overflow-x-auto mt-6">
-              <table className="min-w-full bg-white border border-gray-200">
+          {/* Analysis Tab */}
+          {activeTab === "Analysis" && (
+            <div className="pt-6 px-16 rounded-lg bg-white">
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                Success Potential Index (SPI) + Rank Improvement Program (RIP) +
+                Feedback Sessions
+              </h4>
+              <p className="text-gray-600 mb-6">
+                When Students enrol for JEE Programs after Class XII, time is of
+                the essence. At FIITJEE, we offer concrete feedback and analysis
+                sessions for parents and Students at every stage. All our
+                teachers regularly analyse Students’ skills, concept
+                understanding and rank determination to support them in their
+                journey to improve scores.
+              </p>
+              {/* List of Benefits */}
+              <table className="min-w-full border border-gray-200">
                 <thead className="bg-gray-200">
                   <tr>
-                    <th className="px-4 py-2">Practice Problems</th>
-                    <th className="px-4 py-2">CLIP</th>
-                    <th className="px-4 py-2">Phase Tests</th>
+                    <th className="px-4 py-2">Success Potential Index (SPI)</th>
+                    <th className="px-4 py-2">
+                      Rank Improvement Program (RIP)
+                    </th>
+                    <th className="px-4 py-2">Regular feedback</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="border px-4 py-2">
-                      Chapter-wise assignments checked by faculty.
+                      We are the only institute in India capable of predicting a
+                      Student’s SPI and constantly encouraging them to emulate
+                      it.
                     </td>
                     <td className="border px-4 py-2">
-                      Improves rank and score in JEE.
+                      This program is followed by special classes to help
+                      Students improve their rank in JEE Main and JEE Advanced.
                     </td>
                     <td className="border px-4 py-2">
-                      Periodic tests on the latest JEE pattern.
+                      Our faculty members and academic operations team provide
+                      timely constructive feedback apart from the scheduled
+                      parent-teacher meetings.
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div>
-        )}
-
-        {/* Analysis Tab */}
-        {activeTab === "Analysis" && (
-          <div className="bg-gray-100 p-6 rounded-lg">
-            <h4 className="text-xl font-semibold text-gray-800 mb-4">
-              Success Potential Index + Rank Improvement Program
-            </h4>
-            <p className="text-gray-600">
-              Timely feedback and analysis sessions are held to enhance
-              students&apos; performance and readiness for the final exams.
-            </p>
-            {/* List of Benefits */}
-            <ul className="list-disc list-inside mt-4 text-gray-600">
-              <li>Concept tests, full and part tests.</li>
-              <li>SWOT analysis for identifying strengths & weaknesses.</li>
-              <li>Custom tests with detailed analytics.</li>
-              <li>Experience real-life test environments.</li>
-              <li>Smart revision plans for better preparation.</li>
-            </ul>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       <section className="bg-[#c4171b] text-white px-16 mt-10 flex flex-col lg:flex-row items-center justify-around">
