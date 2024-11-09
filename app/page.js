@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import BelowMain from "@/components/BelowMain";
 import BreadCrumbs from "@/components/BreadCrumbs";
+import FIITJEEeSchool from "@/components/FIITJEE";
 import Hero from "@/components/Hero";
 import Main from "@/components/Main";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Main />
       <BelowMain />
+      <FIITJEEeSchool />
     </div>
   );
 }
