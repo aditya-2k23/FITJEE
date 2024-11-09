@@ -105,18 +105,18 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center mb-24 p-8 gap-24">
-        <div className="flex-shrink-0 p-6">
+      <div className="flex flex-col md:flex-row mt-60 mb-40 p-8 gap-24">
+        <div className="flex-shrink-0 p-6 relative top-12 left-32 z-10">
           <Image
             src="/A-red-check-mark.png.webp"
             alt="A-red-check-mark"
-            width={400}
+            width={490}
             height={600}
             className="object-cover rounded-bl-[2rem]"
           />
         </div>
-        <div className="flex flex-col items-center md:items-start mt-6 md:mt-0 bg-white rounded-lg shadow-lg py-10 px-32">
-          <p className="text-5xl">
+        <div className="mt-6 md:mt-0 rounded-lg shadow-lg py-10 px-10 w-full relative bottom-40 right-5">
+          <p className="text-4xl">
             Grab the last chance to secure a top rank in JEE.
             <br />
             <br />
