@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import BelowMain from "@/components/BelowMain";
 import BreadCrumbs from "@/components/BreadCrumbs";
 import Hero from "@/components/Hero";
 import Main from "@/components/Main";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <Main />
+      <BelowMain />
     </div>
   );
 }
