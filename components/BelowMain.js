@@ -26,7 +26,7 @@ const BelowMain = () => {
   return (
     <>
       {/* First Section */}
-      <section className="my-20">
+      <section className="my-20 px-4 md:px-0">
         <article>
           <div className="bg-gray-100 p-8 rounded-tl-3xl rounded-br-3xl shadow-md">
             <div className="text-container">
@@ -49,11 +49,11 @@ const BelowMain = () => {
       </section>
 
       {/* Second Section */}
-      <section className="mt-16">
+      <section className="mt-16 px-4 md:px-0">
         <article>
           <div>
             <div className="bg-red-700 px-10 text-center py-24 rounded-tl-3xl rounded-br-3xl">
-              <h2 className="text-white text-4xl">
+              <h2 className="text-white text-2xl md:text-4xl">
                 Opt For A FIITJEE Program That Elevates Students&apos; Academic
                 Calibre For JEE Main And JEE Advanced 2024.
               </h2>
@@ -63,22 +63,24 @@ const BelowMain = () => {
       </section>
 
       {/* Third Section */}
-      <section className="my-40">
-        <article className="flex justify-between max-w-6xl mx-auto">
-          <div className="flex">
-            <div className="max-w-[20rem]">
+      <section className="my-40 px-4 md:px-0">
+        <article className="flex flex-col md:flex-row justify-between max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row">
+            <div className="max-w-full md:max-w-[20rem]">
               <div className="mb-8">
                 <h2 className="text-xl font-extralight mb-8">
                   For Students from Class VI to Class XII Pass
                 </h2>
-                <h2 className="text-5xl font-bold">PROGRAMS FOR EVERY STAGE</h2>
+                <h2 className="text-3xl md:text-5xl font-bold">
+                  PROGRAMS FOR EVERY STAGE
+                </h2>
               </div>
               <div>
                 <label className="block mb-4 text-lg font-medium">
                   Select Class
                 </label>
                 {/* Dropdown Component */}
-                <div className="relative inline-block w-64">
+                <div className="relative inline-block w-full md:w-64">
                   <div
                     className="dropdown-header border border-gray-600 text-gray-800 p-5 rounded-full flex items-center justify-between cursor-pointer"
                     onClick={toggleDropdown}
@@ -118,8 +120,8 @@ const BelowMain = () => {
             </div>
 
             {/* Program Details Slider */}
-            <div className="ml-32 mt-8">
-              <div className="space-x-8">
+            <div className="ml-0 md:ml-32 mt-8">
+              <div className="space-x-0 md:space-x-8">
                 <div className="p-6">
                   <div className="mb-4">
                     <Image
