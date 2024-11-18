@@ -5,19 +5,19 @@ import React from "react";
 const Hero = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-center w-full mb-40">
-        <div className="text-center md:text-left mb-6 md:mb-0 max-w-xl mr-20">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full mb-40 px-4 md:px-0">
+        <div className="text-center md:text-left mb-6 md:mb-0 max-w-xl md:mr-20">
           <h4 className="text-3xl font-Avenir font-semibold mb-4">
             Class XII Pass
           </h4>
-          <h1 className="text-6xl font-Avenir font-bold mb-4 leading-[4.7rem]">
+          <h1 className="text-4xl md:text-6xl font-Avenir font-bold mb-4 leading-tight md:leading-[4.7rem]">
             One Year Classroom Program
           </h1>
           <p className="text-gray-700 text-lg">
             An Academic Opportunity to Conquer Your JEE Dream within the Right
             Time-frame.
           </p>
-          <div className="flex gap-4 mt-4 justify-center md:justify-start">
+          <div className="flex flex-col md:flex-row gap-4 mt-4 justify-center md:justify-start">
             <Link
               href="/fiitjee-admission-test-details"
               className="px-6 py-4 bg-red-600 font-Open_sans text-white/90 rounded-full hover:bg-red-700 transition duration-300 font-semibold flex items-center"
@@ -66,6 +66,7 @@ const Hero = () => {
             alt="advance-one-year-class-12th"
             width={600}
             height={600}
+            className="w-full h-auto"
           />
           <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
             <svg
@@ -85,8 +86,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 bg-black p-16 rounded-tl-none rounded-tr-[5rem] rounded-bl-none max-w-6xl mb-28 mt-5 w-full">
-        <p className="text-xl leading-relaxed text-white">
+      <div className="flex flex-col gap-6 bg-black p-8 md:p-16 rounded-tl-none rounded-tr-[5rem] rounded-bl-none max-w-6xl mb-28 mt-5 w-full">
+        <p className="text-lg md:text-xl leading-relaxed text-white">
           An Advanced One Year Program for JEE Main & JEE Advanced focuses on
           delivering the essential impetus for Students to achieve a Top Rank.
           With FIITJEE&apos;s One Year Program for JEE Advanced, Students can
@@ -106,17 +107,17 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col md:flex-row mt-60 mb-40 p-8 gap-24">
-        <div className="flex-shrink-0 p-6 relative top-12 left-32 z-10">
+        <div className="flex-shrink-0 p-6 relative md:top-12 md:left-32 z-10">
           <Image
             src="/A-red-check-mark.png.webp"
             alt="A-red-check-mark"
             width={490}
             height={600}
-            className="object-cover rounded-bl-[2rem]"
+            className="object-cover rounded-bl-[2rem] w-full h-auto"
           />
         </div>
-        <div className="mt-6 md:mt-0 rounded-lg shadow-lg py-10 px-10 w-full relative bottom-40 right-5">
-          <p className="text-4xl">
+        <div className="mt-6 md:mt-0 rounded-lg shadow-lg py-10 px-10 w-full relative md:bottom-40 md:right-5">
+          <p className="text-2xl md:text-4xl">
             Grab the last chance to secure a top rank in JEE.
             <br />
             <br />
