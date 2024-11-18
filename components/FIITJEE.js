@@ -6,12 +6,14 @@ const FIITJEEeSchool = () => {
     <>
       {/* Existing eSchool Section */}
       <section className="bg-[#ffcc01] py-16">
-        <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-8 gap-8">
+        <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 sm:px-8 gap-8">
           {/* Text Container */}
-          <div className="flex-1">
-            <h2 className="text-5xl font-extrabold mb-5">FIITJEE eSchool</h2>
+          <div className="flex-1 text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-5">
+              FIITJEE eSchool
+            </h2>
             <div className="description mb-6">
-              <p className="text-lg leading-7">
+              <p className="text-base sm:text-lg leading-7">
                 Class XII Advanced One Year Program is also available in Live
                 online mode with classes held in 2-way communication.
               </p>
@@ -20,7 +22,7 @@ const FIITJEEeSchool = () => {
               href="https://fiitjee-eschool.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-red-700 text-white rounded-full hover:bg-red-800 transition duration-300"
+              className="inline-flex items-center px-4 sm:px-6 py-3 bg-red-700 text-white rounded-full hover:bg-red-800 transition duration-300"
             >
               <svg
                 width="9"
@@ -46,27 +48,28 @@ const FIITJEEeSchool = () => {
               alt="Online Learning"
               width={400}
               height={400}
+              className="mx-auto"
             />
           </div>
         </div>
       </section>
 
       {/* New Section Below the Existing One */}
-      <section className="bg-[#ffcc01] py-16 my-40">
-        <div className="max-w-6xl mx-auto px-8">
+      <section className="bg-[#ffcc01] py-16 my-20 sm:my-40">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
           <div className="flex items-center flex-col p-8">
-            <h2 className="text-5xl font-bold mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-center">
               Advanced One Year Program
             </h2>
             <div className="description mb-4">
-              <p className="text-3xl text-center">
+              <p className="text-lg sm:text-2xl lg:text-3xl text-center">
                 Get a good head start with the right study materials and tools
                 to stay organized, focused, and on track.
               </p>
             </div>
             <a
               href="/fiitjee-admission-test-details"
-              className="inline-flex mt-5 items-center px-7 py-5 bg-red-700 text-white font-semibold rounded-full hover:bg-red-800 transition duration-300"
+              className="inline-flex mt-5 items-center px-5 sm:px-7 py-4 sm:py-5 bg-red-700 text-white font-semibold rounded-full hover:bg-red-800 transition duration-300"
             >
               <svg
                 width="9"
