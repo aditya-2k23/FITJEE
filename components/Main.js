@@ -183,7 +183,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start">
+        <div className="w-full pb-10 lg:w-1/2 flex flex-col items-start">
           <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
             Redefine The Success Mantra For JEE Main And JEE Advanced
           </h2>
