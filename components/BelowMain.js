@@ -27,25 +27,23 @@ const BelowMain = () => {
     <>
       {/* First Section */}
       <section className="my-20 px-4 md:px-0">
-        <article>
-          <div className="bg-gray-100 p-8 rounded-tl-3xl rounded-br-3xl shadow-md">
-            <div className="text-container">
-              <h6 className="text-xl mb-4">Duration</h6>
-              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                296 classroom contact hours with a total input of 340 hours,
-                including doubt-clearing classes, RIP, tests, phase tests,
-                all-India test series, test analysis sessions, and more. Classes
-                are held 4-5 days a week for 4-6 hours. We offer morning and
-                evening classes.
-              </p>
-              <p className="text-gray-600 text-lg italic">
-                <strong>Note:</strong> The schedule of classes may vary from one
-                study centre to another. Kindly contact the nearest FIITJEE
-                centre for more details.
-              </p>
-            </div>
+        <div className="bg-gray-100 p-8 rounded-tl-3xl rounded-br-3xl shadow-md">
+          <div className="text-container">
+            <h6 className="text-xl mb-3 font-semibold">Duration</h6>
+            <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+              296 classroom contact hours with a total input of 340 hours,
+              including doubt-clearing classes, RIP, tests, phase tests,
+              all-India test series, test analysis sessions, and more. Classes
+              are held 4-5 days a week for 4-6 hours. We offer morning and
+              evening classes.
+            </p>
+            <p className="text-gray-600 text-lg italic">
+              <strong>Note:</strong> The schedule of classes may vary from one
+              study centre to another. Kindly contact the nearest FIITJEE centre
+              for more details.
+            </p>
           </div>
-        </article>
+        </div>
       </section>
 
       {/* Second Section */}
