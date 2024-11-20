@@ -7,17 +7,17 @@ const Hero = () => {
     <div>
       <div className="flex flex-col md:flex-row items-center justify-center w-full mb-40 px-4 md:px-0">
         <div className="text-center md:text-left mb-6 md:mb-0 max-w-xl md:mr-20">
-          <h4 className="text-3xl font-Avenir font-semibold mb-4">
+          <h4 className="text-3xl font-Avenir font-semibold md:mb-4">
             Class XII Pass
           </h4>
-          <h1 className="text-4xl md:text-6xl font-Avenir font-bold mb-4 leading-tight md:leading-[4.7rem]">
+          <h1 className="text-4xl md:text-6xl font-Avenir font-bold mb-4 leading-7 md:leading-[4.7rem]">
             One Year Classroom Program
           </h1>
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-700 text-lg leading-6">
             An Academic Opportunity to Conquer Your JEE Dream within the Right
             Time-frame.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 mt-4 justify-center md:justify-start">
+          <div className="flex flex-col w-5/6 items-center md:flex-row gap-4 mt-4 justify-center md:justify-start">
             <Link
               href="/fiitjee-admission-test-details"
               className="px-6 py-4 bg-red-600 font-Open_sans text-white/90 rounded-full hover:bg-red-700 transition duration-300 font-semibold flex items-center"
