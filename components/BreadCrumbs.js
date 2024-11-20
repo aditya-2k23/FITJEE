@@ -22,7 +22,7 @@ const ArrowIcon = () => (
 
 const BreadCrumbs = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="px-8 py-10">
       <div className="flex items-center flex-wrap text-sm sm:text-base">
         <Link className="text-base" href="/">
           Home
